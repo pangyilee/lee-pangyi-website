@@ -12,4 +12,4 @@ body[data-page="home"]{height:100dvh;overflow:hidden}body[data-page="home"] .sit
 @media(max-width:560px){body[data-page="home"] .overline{font-size:9px}body[data-page="home"] .hero-copy h1{font-size:14vw}body[data-page="home"] .hero-quote{font-size:13px;line-height:1.55}body[data-page="home"] .hero-quote small{font-size:9px}body[data-page="home"] .hero-image{max-height:42vh}}
 /* Uploaded hero image takes precedence; ink landscape remains the background */
 .home-hero .hero-image img{content:normal}
-
+.page-visual{width:100%;height:clamp(190px,28vw,390px);margin:0 0 55px;overflow:hidden;background:#dfe5e6}.page-visual img{width:100%;height:100%;display:block;object-fit:cover}.contact-visual{height:min(46vh,500px);margin:0 0 30px;overflow:hidden}.contact-visual img{width:100%;height:100%;display:block;object-fit:cover}.contact-side{align-self:stretch}.contact-side .location{margin-top:24px}@media(max-width:950px){.page-visual{margin-bottom:38px}.contact-visual{height:36vh}}
