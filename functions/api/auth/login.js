@@ -1,0 +1,2 @@
+import { createSession, passwordIsValid, sessionCookie } from '../../lib/auth.js';
+export async function onRequestPost({ request, env }) { let password=''; try{({password=''}=await request.json());}catch(_){} if(!(await passwordIsValid(password,env))){await new Promise((resolve)=>setTimeout(resolve,800));return Response.json({error:'密碼錯誤'},{status:401});} const session=await createSession(env); return new Response(JSON.stringify({success:true}),{headers:{'Content-Type':'application/json','Set-Cookie':sessionCookie(session),'Cache-Control':'no-store'}}); }
