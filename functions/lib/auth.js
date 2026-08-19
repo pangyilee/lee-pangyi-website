@@ -1,0 +1,9 @@
+const encoder = new TextEncoder();
+function bytesToBase64Url(bytes) { let binary = ''; bytes.forEach((byte) => { binary += String.fromCharCode(byte); }); return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/g, ''); }
+async function hmac(value, secret) { const key = await crypto.subtle.importKey('raw', encoder.encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']); return bytesToBase64Url(new Uint8Array(await crypto.subtle.sign('HMAC', key, encoder.encode(value)))); }
+async function sameSecret(left, right) { const [a,b] = await Promise.all([crypto.subtle.digest('SHA-256', encoder.encode(left)),crypto.subtle.digest('SHA-256', encoder.encode(right))]); const aa=new Uint8Array(a),bb=new Uint8Array(b); let difference=aa.length^bb.length; for(let i=0;i<aa.length;i+=1) difference|=aa[i]^(bb[i]||0); return difference===0; }
+export async function passwordIsValid(password, env) { return Boolean(env.ADMIN_PASSWORD) && sameSecret(password, env.ADMIN_PASSWORD); }
+export async function createSession(env) { const expires=Math.floor(Date.now()/1000)+(8*60*60), value=String(expires); return `${value}.${await hmac(value,env.ADMIN_PASSWORD)}`; }
+export async function isAuthorized(request, env) { if(!env.ADMIN_PASSWORD)return false; const cookie=request.headers.get('Cookie')||'',token=cookie.match(/(?:^|;\s*)pyl_admin=([^;]+)/)?.[1]; if(!token)return false; const [expires,signature]=token.split('.'); if(!expires||!signature||Number(expires)<=Math.floor(Date.now()/1000))return false; return sameSecret(signature,await hmac(expires,env.ADMIN_PASSWORD)); }
+export function sessionCookie(value) { return `pyl_admin=${value}; Path=/; HttpOnly; Secure; SameSite=Strict; Max-Age=28800`; }
+export function clearSessionCookie() { return 'pyl_admin=; Path=/; HttpOnly; Secure; SameSite=Strict; Max-Age=0'; }
