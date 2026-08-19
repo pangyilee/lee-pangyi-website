@@ -1,14 +1,24 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
+<!doctype html>
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LEE Pang-Yi</title>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="李邦儀 Pang-Yi Lee — 音樂家與媒體工作者官方網站">
+  <title>李邦儀 Pang-Yi Lee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <h1>LEE Pang-Yi</h1>
-  <p>Welcome to my website.</p>
-  <p>網站部署測試成功 🎉</p>
-</body>
-</html>
+  <header class="header"><a class="brand" href="#home"><b>PYL</b><span><i data-site="nameZh">李邦儀</i><em data-site="nameEn">PANG-YI LEE</em></span></a><nav id="nav"></nav><button class="language" id="language" aria-label="Switch language">EN</button><button class="menu" id="menu" aria-label="Open menu">☰</button></header>
+  <main>
+    <section class="hero" id="home"><div class="hero-copy reveal"><p class="kicker" data-t="heroKicker">音樂家・媒體工作者</p><h1><span data-site="nameZh">李邦儀</span><small data-site="nameEn">PANG-YI LEE</small></h1><blockquote><span data-site="quoteZh">在聲音與影像之間，讓每一次創作成為真誠的相遇。</span><small data-site="quoteEn">Between sound and image, let every creation become an honest encounter.</small></blockquote><a class="round-link" href="#about"><span>↓</span><i data-t="discover">進入網站</i></a></div><div class="hero-visual"><div class="portrait-wrap"><img id="heroImage" alt="Pang-Yi Lee portrait"><div class="orbit">MUSIC · MEDIA · STORIES ·</div></div></div><div class="scroll-mark">SCROLL <span></span></div></section>
+    <section class="about section" id="about"><div class="section-no">01</div><div class="about-visual reveal"><img id="aboutImage" alt="Pang-Yi Lee"><span class="image-label">PORTRAIT / 肖像</span></div><div class="about-copy reveal"><p class="eyebrow" data-about="eyebrowZh"></p><h2 data-about="titleZh"></h2><div class="prose" data-about="bodyZh"></div><p class="signature">Pang-Yi Lee</p></div></section>
+    <section class="section listing" id="news"><header class="section-title"><div><span>02</span><p data-t="newsLabel">動態與分享</p><h2>News</h2></div><p data-t="newsIntro">音樂資訊、創作札記，以及正在發生的事。</p></header><div class="news-grid" id="newsGrid"></div></section>
+    <section class="section calendar" id="calendar"><header class="section-title light"><div><span>03</span><p data-t="calendarLabel">演出行程</p><h2>Calendar</h2></div><div class="tabs"><button class="active" data-events="upcoming" data-t="upcoming">近期演出</button><button data-events="past" data-t="past">過往演出</button></div></header><div id="eventsList"></div></section>
+    <section class="section listing" id="works"><header class="section-title"><div><span>04</span><p data-t="worksLabel">影音與創作</p><h2 data-t="worksTitle">影片與作品</h2></div><p data-t="worksIntro">聽見作品，也看見聲音背後的故事。</p></header><div class="works-grid" id="worksGrid"></div></section>
+    <section class="section projects" id="projects"><header class="section-title light"><div><span>05</span><p data-t="projectsLabel">媒體經歷</p><h2>Projects</h2></div></header><div id="projectsList"></div></section>
+    <section class="contact section" id="contact"><div class="section-no">06</div><p class="eyebrow" data-t="contactLabel">聯絡與合作</p><h2 data-t="contactTitle">讓我們一起<br>創造下一個聲音。</h2><p data-t="contactBody">演出邀約、媒體合作、製作與其他有趣的提案，歡迎來信。</p><a id="emailLink" class="email" href="#">hello@pangyilee.com ↗</a><p id="location"></p></section>
+  </main>
+  <footer><a class="footer-brand" href="#home">PYL</a><p>© <span id="year"></span> PANG-YI LEE. <span data-t="rights">版權所有。</span></p><div class="socials" id="socials"></div><a class="admin-link" href="admin.html" aria-label="Admin">•</a></footer>
+  <script src="app.js"></script>
+</body></html>
