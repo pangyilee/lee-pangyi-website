@@ -1,0 +1,15 @@
+const ALLOWED_EMAIL = 'piano1234560@gmail.com';
+function authorized(request) {
+  return (request.headers.get('Cf-Access-Authenticated-User-Email') || '').toLowerCase() === ALLOWED_EMAIL;
+}
+export async function onRequestPost({ request, env }) {
+  if (!authorized(request)) return Response.json({ error: 'Unauthorized' }, { status: 401 });
+  const type = request.headers.get('content-type') || '';
+  if (!/^image\/(jpeg|png|webp|gif)$/.test(type)) return Response.json({ error: 'Unsupported image type' }, { status: 415 });
+  const bytes = await request.arrayBuffer();
+  if (bytes.byteLength > 5 * 1024 * 1024) return Response.json({ error: 'Image exceeds 5MB' }, { status: 413 });
+  const ext = { 'image/jpeg':'jpg', 'image/png':'png', 'image/webp':'webp', 'image/gif':'gif' }[type];
+  const key = `${Date.now()}-${crypto.randomUUID()}.${ext}`;
+  await env.MEDIA.put(key, bytes, { httpMetadata: { contentType: type, cacheControl: 'public, max-age=31536000, immutable' } });
+  return Response.json({ success: true, url: `/api/media/${key}` });
+}
