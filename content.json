@@ -1,0 +1,38 @@
+{
+  "site": {
+    "nameZh": "李邦儀",
+    "nameEn": "PANG-YI LEE",
+    "roleZh": "音樂家・媒體工作者",
+    "roleEn": "Musician · Media Professional",
+    "quoteZh": "在聲音與影像之間，讓每一次創作成為真誠的相遇。",
+    "quoteEn": "Between sound and image, let every creation become an honest encounter.",
+    "heroImage": "https://avatars.githubusercontent.com/u/318523050?v=4",
+    "email": "hello@pangyilee.com",
+    "locationZh": "臺北・臺灣",
+    "locationEn": "Taipei, Taiwan"
+  },
+  "about": {
+    "eyebrowZh": "關於李邦儀",
+    "eyebrowEn": "About Pang-Yi",
+    "titleZh": "以聲音敘事，\n也以媒體連結世界。",
+    "titleEn": "Telling stories through sound,\nconnecting worlds through media.",
+    "bodyZh": "李邦儀是一位來自臺灣的音樂家與媒體工作者，創作橫跨現場演出、聲音製作、影像與跨媒體企劃。他相信作品不只是被觀看或聆聽，更是一個讓人與人彼此靠近的場域。\n\n目前持續發展個人音樂創作、演出與國際合作，並透過媒體實務探索藝術內容在不同平台上的新可能。",
+    "bodyEn": "Pang-Yi Lee is a Taiwan-based musician and media professional whose practice spans live performance, sound production, moving image, and interdisciplinary projects. He believes that creative work is more than something to watch or hear—it is a space where people can move closer to one another.\n\nHe continues to develop original music, performances, and international collaborations while exploring new possibilities for artistic content across media platforms."
+  },
+  "news": [
+    {"date":"2026-08-01","categoryZh":"音樂筆記","categoryEn":"Music Notes","titleZh":"網站正式上線：一個關於聲音、影像與相遇的新空間","titleEn":"The website is live: a new space for sound, image, and encounters","summaryZh":"歡迎來到我的全新個人網站。未來將在這裡分享音樂觀察、演出消息與創作進度。","summaryEn":"Welcome to my new website—a home for music discoveries, performance updates, and notes from my creative process.","image":""}
+  ],
+  "events": [
+    {"date":"2026-10-18","time":"19:30","venueZh":"場地待公布","venueEn":"Venue TBA","cityZh":"臺北","cityEn":"Taipei","titleZh":"秋季現場演出","titleEn":"Autumn Live Performance","status":"upcoming","link":""},
+    {"date":"2025-12-20","time":"20:00","venueZh":"線上","venueEn":"Online","cityZh":"全球","cityEn":"Worldwide","titleZh":"年末聲音企劃","titleEn":"Year-end Sound Session","status":"past","link":""}
+  ],
+  "works": [
+    {"type":"youtube","titleZh":"精選作品即將公開","titleEn":"Featured work coming soon","descriptionZh":"可於後台貼上 YouTube 影片網址。","descriptionEn":"Add a YouTube URL from the admin dashboard.","url":"https://www.youtube.com/","image":""},
+    {"type":"image","titleZh":"聲音風景系列","titleEn":"Soundscape Series","descriptionZh":"影像與聲音的跨媒體創作。","descriptionEn":"An interdisciplinary study in moving image and sound.","url":"","image":""}
+  ],
+  "projects": [
+    {"year":"2026","titleZh":"獨立音樂與媒體企劃","titleEn":"Independent Music & Media Initiative","roleZh":"創作者／製作人","roleEn":"Creator / Producer","descriptionZh":"結合原創音樂、訪談與影像敘事的跨平台內容計畫。","descriptionEn":"A cross-platform initiative bringing together original music, interviews, and visual storytelling."},
+    {"year":"2025","titleZh":"聲音內容製作與編輯","titleEn":"Audio Content Production & Editorial","roleZh":"製作／企劃","roleEn":"Production / Programming","descriptionZh":"參與聲音節目、現場內容與數位媒體專案。","descriptionEn":"Produced audio programs, live content, and digital media projects."}
+  ],
+  "socials": {"instagram":"https://instagram.com/","facebook":"https://facebook.com/","youtube":"https://youtube.com/","soundcloud":"https://soundcloud.com/"}
+}
