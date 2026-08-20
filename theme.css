@@ -87,3 +87,22 @@ html:has(body[data-page="home"]){scroll-snap-type:y proximity!important}.home-he
  body[data-page="home"] .hero-image:before,body[data-page="home"] .hero-image:after{display:none!important}
  body[data-page="home"] .hero-image figcaption{display:block!important;z-index:4}
 }
+
+/* About portrait: dissolve the photograph itself instead of laying down a grey block */
+.about-page .about-photo{background:transparent!important}
+.about-page .about-photo img{
+ -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.05) 5%,rgba(0,0,0,.24) 13%,rgba(0,0,0,.58) 24%,rgba(0,0,0,.86) 36%,#000 48%)!important;
+ mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.05) 5%,rgba(0,0,0,.24) 13%,rgba(0,0,0,.58) 24%,rgba(0,0,0,.86) 36%,#000 48%)!important;
+ -webkit-mask-repeat:no-repeat!important;mask-repeat:no-repeat!important
+}
+.about-page .about-photo:after{display:none!important}
+
+/* Compact mobile navigation: every destination fits in one viewport */
+@media(max-width:950px){
+ .main-nav{position:fixed!important;top:70px!important;right:0!important;bottom:0!important;left:0!important;height:calc(100dvh - 70px)!important;z-index:100!important;padding:12px 8vw 18px!important;overflow:hidden!important;flex-direction:column!important;justify-content:space-evenly!important;gap:0!important;background:rgba(244,246,243,.97)!important;backdrop-filter:blur(18px)!important}
+ .main-nav.open{display:flex!important}
+ .main-nav a{display:flex!important;align-items:center!important;flex:1 1 0!important;min-height:0!important;max-height:66px!important;padding:0!important;font-size:clamp(17px,4.8vw,22px)!important;letter-spacing:.08em!important;border-bottom:1px solid rgba(31,49,80,.11)}
+ .main-nav a:last-child{border-bottom:0}
+ .main-nav a:after{bottom:0!important}
+ .about-page .about-photo img{-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 62%,rgba(0,0,0,.82) 72%,rgba(0,0,0,.35) 88%,transparent 100%)!important;mask-image:linear-gradient(180deg,#000 0%,#000 62%,rgba(0,0,0,.82) 72%,rgba(0,0,0,.35) 88%,transparent 100%)!important}
+}
