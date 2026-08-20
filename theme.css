@@ -48,3 +48,6 @@ html:has(body[data-page="home"]){scroll-behavior:smooth;scroll-snap-type:y manda
 
 /* Keep chapter navigation responsive: gentle snap, native anchor jumps */
 html:has(body[data-page="home"]){scroll-snap-type:y proximity!important}.home-hero[data-snap-section],.home-guide[data-snap-section]{scroll-snap-stop:normal!important}
+
+/* Before playback, keep wheel gestures on the homepage instead of inside YouTube */
+.guide-work-media .work-image{position:relative}.video-wheel-shield{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border:0;background:rgba(5,15,27,.06);color:#fff;cursor:pointer;text-shadow:0 2px 12px rgba(0,0,0,.7);transition:background .25s}.video-wheel-shield:hover{background:rgba(5,15,27,.16)}.video-wheel-shield span{display:grid;place-items:center;width:68px;height:68px;padding-left:5px;border-radius:50%;background:#d6b34e;box-shadow:0 10px 30px rgba(0,0,0,.24);font-size:25px}.video-wheel-shield small{font:600 11px var(--latin);letter-spacing:.14em;text-transform:uppercase}
