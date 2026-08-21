@@ -109,15 +109,15 @@ html:has(body[data-page="home"]){scroll-snap-type:y proximity!important}.home-he
 
 /* Unified, calmer display-title scale across the public site */
 .home-guide h2,.page-head h1,.about-page .about-text h1,.contact-page h1{
- font-size:clamp(36px,4.6vw,68px)!important;
+ font-size:clamp(30px,3vw,48px)!important;
  line-height:1.16!important;
  letter-spacing:.01em
 }
-.home-guide h3{font-size:clamp(22px,2.35vw,34px)!important;line-height:1.45!important}
-.guide-contact h2{font-size:clamp(42px,5.8vw,82px)!important;line-height:1.18!important}
+.home-guide h3{font-size:clamp(20px,1.9vw,28px)!important;line-height:1.45!important}
+.guide-contact h2{font-size:clamp(36px,4.2vw,60px)!important;line-height:1.18!important}
 .news-card h2,.work-card h2,.project h2,.event h2{font-size:clamp(18px,1.55vw,24px)!important}
 @media(max-width:560px){
- .home-guide h2,.page-head h1,.about-page .about-text h1,.contact-page h1{font-size:clamp(32px,10vw,44px)!important}
- .home-guide h3{font-size:clamp(20px,6.4vw,27px)!important}
- .guide-contact h2{font-size:clamp(36px,11vw,50px)!important}
+ .home-guide h2,.page-head h1,.about-page .about-text h1,.contact-page h1{font-size:clamp(27px,8.5vw,36px)!important}
+ .home-guide h3{font-size:clamp(18px,5.7vw,23px)!important}
+ .guide-contact h2{font-size:clamp(30px,9vw,40px)!important}
 }
