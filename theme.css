@@ -121,3 +121,29 @@ html:has(body[data-page="home"]){scroll-snap-type:y proximity!important}.home-he
  .home-guide h3{font-size:clamp(18px,5.7vw,23px)!important}
  .guide-contact h2{font-size:clamp(30px,9vw,40px)!important}
 }
+
+/* Final mobile composition: compact type and a true edge-to-edge concert chapter */
+@media(max-width:560px){
+ body[data-page="home"] .hero-image figcaption{display:none!important}
+ body[data-page="home"] .hero-copy{width:82%!important;padding-bottom:6.5vh!important}
+ body[data-page="home"] .hero-copy .overline{font-size:9px!important;letter-spacing:.12em!important}
+ body[data-page="home"] .hero-copy .hero-name{width:72vw!important;max-width:310px!important;margin:9px 0 13px!important}
+ body[data-page="home"] .hero-quote{max-width:94%!important;margin-top:15px!important;padding-left:14px!important;font-size:13px!important;line-height:1.7!important}
+ body[data-page="home"] .hero-quote small{font-size:9px!important;line-height:1.55!important;margin-top:8px!important}
+ body[data-page="home"] .home-explore{margin-top:15px!important;font-size:10px!important;gap:12px!important}
+ .home-guide[data-snap-section]{padding:58px 7vw!important}
+ .home-guide h2,.page-head h1,.about-page .about-text h1,.contact-page h1{font-size:clamp(25px,7.6vw,32px)!important}
+ .home-guide h3{font-size:clamp(17px,5.1vw,21px)!important}
+ .home-guide p{font-size:12px!important;line-height:1.75!important}
+ .guide-index{font-size:9px!important}
+ .guide-link{font-size:9px!important;margin-top:22px!important}
+ .guide-news-list time,.guide-news-list span{font-size:9px!important}
+ .guide-news-list h3,.guide-schedule h3{font-size:15px!important}
+ .guide-schedule time,.guide-schedule span{font-size:10px!important}
+ .home-guide.guide-calendar{width:100vw!important;max-width:none!important;margin:0!important;padding:0!important;overflow:hidden!important;background:#07111d!important}
+ .guide-calendar .calendar-stage{width:100vw!important;min-height:max(100svh,177.78vw)!important;margin:0!important;padding:70px 11vw!important;border-radius:0!important;box-sizing:border-box!important}
+ .guide-calendar .calendar-stage h2{font-size:clamp(27px,8vw,34px)!important;margin-bottom:34px!important}
+ .guide-schedule{width:100%!important;margin-bottom:24px!important}
+ .guide-schedule>a{grid-template-columns:74px 1fr 16px!important;gap:10px!important;padding:15px 0!important}
+ .guide-contact h2{font-size:clamp(28px,8.4vw,36px)!important}
+}
