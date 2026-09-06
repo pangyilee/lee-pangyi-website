@@ -30,9 +30,34 @@
     {"type":"youtube","titleZh":"精選作品即將公開","titleEn":"Featured work coming soon","descriptionZh":"可於後台貼上 YouTube 影片網址。","descriptionEn":"Add a YouTube URL from the admin dashboard.","url":"https://www.youtube.com/","image":""},
     {"type":"image","titleZh":"聲音風景系列","titleEn":"Soundscape Series","descriptionZh":"影像與聲音的跨媒體創作。","descriptionEn":"An interdisciplinary study in moving image and sound.","url":"","image":""}
   ],
-  "projects": [
-    {"year":"2026","titleZh":"獨立音樂與媒體企劃","titleEn":"Independent Music & Media Initiative","roleZh":"創作者／製作人","roleEn":"Creator / Producer","descriptionZh":"結合原創音樂、訪談與影像敘事的跨平台內容計畫。","descriptionEn":"A cross-platform initiative bringing together original music, interviews, and visual storytelling."},
-    {"year":"2025","titleZh":"聲音內容製作與編輯","titleEn":"Audio Content Production & Editorial","roleZh":"製作／企劃","roleEn":"Production / Programming","descriptionZh":"參與聲音節目、現場內容與數位媒體專案。","descriptionEn":"Produced audio programs, live content, and digital media projects."}
-  ],
+  "classes": {
+    "eyebrowZh": "CLASS｜授課",
+    "eyebrowEn": "CLASS｜PRIVATE LESSONS",
+    "titleZh": "從樂器出發，聽見文化，\n也找到自己的聲音。",
+    "titleEn": "Begin with the instrument,\nthen discover your own voice.",
+    "introZh": "提供一對一線上與實體課程。課程不只處理演奏技術，也從聆聽、風格、文化脈絡與即興出發，陪伴每位學習者建立能真正內化的音樂語言。",
+    "introEn": "Private lessons are available online and in person. Beyond technique, we work through listening, style, cultural context, and improvisation so each student can develop an embodied musical language.",
+    "image": "",
+    "course1TitleZh": "琵琶",
+    "course1TitleEn": "Pipa",
+    "course1BodyZh": "適合初學至進階學習者。依個人程度安排基本功、傳統曲目、音色表現、樂曲詮釋與舞台準備。",
+    "course1BodyEn": "For beginning through advanced students, with individualized work in technique, traditional repertoire, tone, interpretation, and performance preparation.",
+    "course2TitleZh": "烏德琴",
+    "course2TitleEn": "Oud",
+    "course2BodyZh": "從持琴、撥奏與音階系統開始，逐步進入阿拉伯與中東音樂的旋律語彙、曲目及即興。",
+    "course2BodyEn": "Beginning with posture, picking, and modal foundations, then moving into Middle Eastern melodic language, repertoire, and improvisation.",
+    "course3TitleZh": "跨文化音樂與即興",
+    "course3TitleEn": "Cross-cultural Music & Improvisation",
+    "course3BodyZh": "適合希望打開聆聽與創作方式的樂器學習者。透過不同音樂文化的節奏、旋律與互動，發展個人的當代聲音。",
+    "course3BodyEn": "For instrumentalists who want to expand how they listen and create through rhythm, melody, interaction, and musical traditions across cultures.",
+    "faq1QuestionZh": "課程以線上還是實體進行？",
+    "faq1QuestionEn": "Are lessons online or in person?",
+    "faq1AnswerZh": "可安排線上課程；實體課程則依所在地與時間個別確認。",
+    "faq1AnswerEn": "Online lessons are available. In-person lessons depend on location and schedule.",
+    "faq2QuestionZh": "完全沒有基礎也可以學嗎？",
+    "faq2QuestionEn": "Can complete beginners study with you?",
+    "faq2AnswerZh": "可以。課程會依照你的經驗、目標與學習速度安排。",
+    "faq2AnswerEn": "Yes. Lessons are shaped around your experience, goals, and learning pace."
+  },
   "socials": {"instagram":"https://instagram.com/","facebook":"https://facebook.com/","youtube":"https://youtube.com/","soundcloud":"https://soundcloud.com/"}
 }

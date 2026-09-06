@@ -9,7 +9,7 @@ A bilingual portfolio and editorial website for musician and media professional 
 - News
 - Calendar
 - Works / 影片與作品
-- Projects
+- Classes
 - Contact
 - Content Studio / 後台內容管理
 
