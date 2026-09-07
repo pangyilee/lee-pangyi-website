@@ -8,6 +8,7 @@ export async function onRequestPost({ request, env }) {
 
   const name = clean(input.name, 120);
   const email = clean(input.email, 200).toLowerCase();
+  const phone = clean(input.phone, 120);
   const subject = clean(input.subject, 120);
   const message = clean(input.message, 3000);
   if (!name || !message || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -16,6 +17,6 @@ export async function onRequestPost({ request, env }) {
 
   const createdAt = new Date().toISOString();
   const id = `${Date.now()}-${crypto.randomUUID()}`;
-  await env.CONTENT_KV.put(`inquiry:${id}`, JSON.stringify({ id, createdAt, name, email, subject, message }));
+  await env.CONTENT_KV.put(`inquiry:${id}`, JSON.stringify({ id, createdAt, name, email, phone, subject, message }));
   return Response.json({ success: true });
 }
