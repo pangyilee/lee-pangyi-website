@@ -4,6 +4,7 @@ export async function onRequestPost({ request, env }) {
   let input;
   try { input = await request.json(); }
   catch (_) { return Response.json({ error: 'Invalid request' }, { status: 400 }); }
+  if (!input || typeof input !== 'object' || Array.isArray(input)) return Response.json({ error: 'Invalid request' }, { status: 400 });
   if (input.website) return Response.json({ success: true });
 
   const name = clean(input.name, 120);
@@ -17,6 +18,11 @@ export async function onRequestPost({ request, env }) {
 
   const createdAt = new Date().toISOString();
   const id = `${Date.now()}-${crypto.randomUUID()}`;
-  await env.CONTENT_KV.put(`inquiry:${id}`, JSON.stringify({ id, createdAt, name, email, phone, subject, message }));
+  try {
+    await env.CONTENT_KV.put(`inquiry:${id}`, JSON.stringify({ id, createdAt, name, email, phone, subject, message }));
+  } catch (_) {
+    return Response.json({ error: 'Storage unavailable' }, { status: 503 });
+  }
   return Response.json({ success: true });
 }
+
