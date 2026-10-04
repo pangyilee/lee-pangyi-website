@@ -161,3 +161,8 @@ html:has(body[data-page="home"]){scroll-snap-type:y proximity!important}.home-he
 /* Keyboard focus and reduced-motion preferences */
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid currentColor;outline-offset:4px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important;scroll-snap-type:none!important}.fade{animation:none!important}*,*::before,*::after{transition:none!important}}
+
+/* Editable homepage introduction */
+body[data-page="home"] .hero-copy .hero-summary{font-size:clamp(18px,1.8vw,26px);line-height:1.9;max-width:560px;white-space:pre-line;margin:28px 0;color:inherit}
+.home-about-link{display:inline-flex;align-items:center;gap:22px;border-bottom:1px solid currentColor;padding:12px 0;font-size:14px;letter-spacing:.08em;margin-right:26px}
+@media(max-width:560px){body[data-page="home"] .hero-copy .hero-summary{font-size:16px;line-height:1.85;margin:22px 0}.home-about-link{font-size:12px;padding:10px 0}}
